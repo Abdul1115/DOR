@@ -1,0 +1,115 @@
+/*Main*/
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    grid-area: main;
+}
+
+.ti {
+    font-size: 2em;
+    color: var(--color-texto);
+    margin-top: 1.25em; /* 20px */
+}
+
+/* Estilo de cada producto */
+.producto {
+    margin: 1em;
+    background-color: var(--color-primario);
+    border: 0.0625em solid var(--color-primario); /* 1px */
+    border-radius: 0.3125em; /* 5px */
+    text-align: center;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.1); /* 4px 6px */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.producto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.2); /* 6px 8px */
+}
+
+/* Estilo de la imagen del producto */
+.producto img {
+    height: auto;
+    object-fit: contain;
+}
+
+/* Información del producto */
+.info-producto {
+    padding: 0.625em 0.3125em; /* 10px 5px */
+}
+
+/* Título del producto */
+.info-producto h3 {
+    font-size: 0.875em; /* 14px */
+    color: var(--color-enfasis);
+    font-weight: bold;
+    margin: 0.3125em 0; /* 5px */
+}
+
+/* Plataformas disponibles */
+.plataformas {
+    font-size: 0.75em; /* 12px */
+    color: var(--color-texto);
+    margin: 0.3125em 0 0.625em; /* 5px 10px */
+    line-height: 1.4;
+}
+
+/* Precio */
+.precio {
+    font-size: 1.125em; /* 18px */
+    font-weight: bold;
+    color: var(--color-texto);
+    margin: 0.625em 0; /* 10px */
+}
+
+.precio .decimales {
+    font-size: 0.875em; /* 14px */
+}
+
+/* Botón Comprar */
+.comprar {
+    background-color: var(--color-enfasis);
+    color: #fff;
+    padding: 0.3125em 0.625em; /* 5px 10px */
+    border-radius: 0.1875em; /* 3px */
+    text-transform: uppercase;
+    font-size: 0.75em; /* 12px */
+    margin-right: 0.3125em; /* 5px */
+}
+
+/* Puntos */
+.puntos {
+    font-size: 0.75em; /* 12px */
+    color: var(--color-texto);
+    margin-top: 0.625em; /* 10px */
+}
+
+a {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 56.25em) { /* 900px */
+    .Productos {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (min-width: 56.3125em) and (max-width: 81.25em) { /* 901px to 1300px */
+    .Productos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (min-width: 81.3125em) { /* 1300px */
+    .Productos {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+}

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout: Mi cesta</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/styleCarrito.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="header-core-logo">
+                <a href="../index.html" class="iconGame" aria-label="Ir a la página principal">GAME</a>
+            </h1>
+        </div>
+        <div class="search">
+            <input type="text" name="search" placeholder="¿Qué buscas?" aria-label="Buscar productos">
+            <button aria-label="Realizar búsqueda">🔍</button>
+        </div>
+        <div class="mode-controls" aria-labelledby="accesibilidad-controles">
+            <span id="accesibilidad-controles" class="sr-only">Controles de accesibilidad</span>
+            <button id="cambiar-tema" aria-label="Cambiar tema" aria-pressed="false">
+                <svg id="icono-tema" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-hidden="true"></svg>
+            </button>
+            <button id="aumentar-letra" aria-label="Aumentar tamaño de letra">A+</button>
+            <button id="disminuir-letra" aria-label="Disminuir tamaño de letra">A-</button>
+            <button id="resetear-letra" aria-label="Restablecer tamaño de letra">A</button>
+            <button aria-label="Abrir perfil">👤</button>
+            <button aria-label="Abrir carrito" onclick="window.location.href='carrito.html'">🛒</button>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../Catalogo/index.html">Catálogo</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#acerca-de">Acerca de</a></li>
+        </ul>
+    </nav>
+
+    <aside>
+        <ul class="menu-list">
+            <li class="menu-item">
+                <a href="./Catalogo/index.html" class="menu-link">
+                    <img src="https://media.game.es/CMS/Menus/Icons/icono-videojuegos_old.svg" alt="">
+                    <span>VIDEOJUEGOS</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="menu-link">
+                    <img src="https://media.game.es/CMS/Menus/Icons/icono-GAMEmorad.png" alt="">
+                    <span>ACCESORIOS</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="menu-link">
+                    <img src="https://media.game.es/Img-statics/nav/nav-gamedigital.png" alt="">
+                    <span>DIGITAL</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="menu-link">
+                    <img src="https://media.game.es/CMS/Menus/Icons/icono-seminuevos.png" alt="">
+                    <span>SEMINUEVOS</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="menu-link">
+                    <img src="https://media.game.es/CMS/Menus/Icons/icono-exclamacion_blanca.png" alt="">
+                    <span>PROMOCIONES</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="menu-link">
+                    <img src="https://media.game.es/Img-statics/nav/navnew/icono-pcgaming.png" alt="">
+                    <span>PC GAMING</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="menu-link">
+                    <img src="https://media.game.es/Img-statics/nav/navnew/icono-merchan.png" alt="">
+                    <span>MERCHAN</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="menu-link">
+                    <img src="https://media.game.es/Img-statics/nav/navnew/icono-libroscine.png" alt="">
+                    <span>CINE-COMICS</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="menu-link">
+                    <img src="https://media.game.es/Img-statics/nav/navnew/icono-electronica.png" alt="">
+                    <span>ELECTRONICA</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    
+    <main>
+        <div class="checkout-steps">
+            <span class="step active">1. Mi cesta</span>
+            <span class="step">2. Datos del cliente</span>
+            <span class="step">3. Opciones de entrega</span>
+            <span class="step">4. Método de pago</span>
+            <span class="step">5. Resumen</span>
+        </div>
+
+        <section class="cart-section">
+            <h1>Mi cesta</h1>
+
+            <div class="cart-item">
+                <input type="checkbox" class="select-product">
+                <img src="../img/206645.png" alt="Producto 1" class="cart-item-image">
+                <div class="cart-item-details">
+                    <h2>God of War Ragnarök</h2>
+                    <p class="price">79.99€</p>
+                    <p class="delivery-info">Recíbelo entre el miércoles 8 y el jueves 9</p>
+                    <p class="seller">Vendido por Penguin</p>
+                    <button class="remove-button">🗑 Eliminar</button>
+                </div>
+                <div class="cart-item-quantity">
+                    <button class="quantity-decrease">-</button>
+                    <input type="number" value="1" class="quantity-input">
+                    <button class="quantity-increase">+</button>
+                </div>
+            </div>
+
+            <div class="cart-item out-of-stock">
+                <input type="checkbox" class="select-product" disabled>
+                <img src="../img/233431.png" alt="Producto 2" class="cart-item-image">
+                <div class="cart-item-details">
+                    <h2>Producto Agotado</h2>
+                    <p class="price">0.00€</p>
+                </div>
+            </div>
+
+            <div class="cart-item">
+                <input type="checkbox" class="select-product" >
+                <img src="../img/P05322.png" alt="Producto 3" class="cart-item-image">
+                <div class="cart-item-details">
+                    <h2>NBA 2K25</h2>
+                    <p class="price">59.99€</p>
+                    <p class="delivery-info">Recíbelo entre el viernes 9 y el sábado 10</p>
+                    <p class="seller">Vendido por Penguin</p>
+                    <button class="remove-button">🗑 Eliminar</button>
+                </div>
+                <div class="cart-item-quantity">
+                    <button class="quantity-decrease">-</button>
+                    <input type="number" value="1" class="quantity-input">
+                    <button class="quantity-increase">+</button>
+                </div>
+            </div>
+
+            <div class="cart-actions">
+                <button class="empty-cart-button">Vaciar cesta</button>
+                <button class="save-list-button">Guardar lista</button>
+            </div>
+
+            <div class="cart-summary">
+                <h2>Resumen</h2>
+                <p>Subtotal artículos: <span class="subtotal">139.98€</span></p>
+                <p>IGIC (7%): <span class="igic">9.79€</span></p>
+                <p>Total: <span class="total">149.77€</span></p>
+                <button class="checkout-button" disabled  onclick="window.location.href='./datos.html'">Realizar pedido</button>
+            </div>
+        </section>
+
+        <section class="recommended-product">
+            <h2>Productos recomendados</h2>
+            <div class="recommended-item">
+                <img src="../img/206645.png" alt="Producto recomendado">
+                <h3>Steelbook PS5</h3>
+                <p class="price">19.99€</p>
+                <button class="add-to-cart" 
+                data-id="1" 
+                data-name="Jaja" 
+                data-price="49.99" 
+                data-image="../img/206645.png">
+            Añadir al carrito
+        </button>            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <h2>Conócenos</h2>
+            <ul>
+                <li><span>Trabaja en GAME</span></li>
+                <li><span>Folletos</span></li>
+                <li><span>Encuentra tu tienda</span></li>
+                <li><span>Tarjeta de socio GAME</span></li>
+                <li><span>App GAME</span></li>
+                <li><span>SAT GAME</span></li>
+                <li><span>Videojuegos</span></li>
+                <li><span>Merchandising</span></li>
+                <li><span>PC Gaming</span></li>
+            </ul>
+        </div>
+        <div>
+            <h2>Atención al cliente</h2>
+            <ul>
+                <li><span>Contáctanos</span></li>
+                <li><span>Comprar en GAME</span></li>
+                <li><span>Clic y Recoger</span></li>
+                <li><span>Reservas</span></li>
+                <li><span>Envíos</span></li>
+                <li><span>Mi Pedido</span></li>
+                <li><span>Postventa</span></li>
+                <li><span>Facturación</span></li>
+                <li><span>Servicio Técnico</span></li>
+            </ul>
+        </div>
+        <div>
+            <h2>Síguenos</h2>
+            <ul>
+                <li><span>X</span></li>
+                <li><span>X SAC</span></li>
+                <li><span>Instagram</span></li>
+                <li><span>Facebook</span></li>
+                <li><span>YouTube</span></li>
+                <li><span>Tik Tok</span></li>
+                <li><span>Telegram</span></li>
+                <li><span>Blog GAME+</span></li>
+            </ul>
+        </div>
+        <div>
+            <h2>Métodos de Pago</h2>
+            <ul>
+                <li><span>Tarjeta Bancaria</span></li>
+                <li><span>American Express</span></li>
+                <li><span>Bizum</span></li>
+                <li><span>PayPal</span></li>
+                <li><span>Pepper</span></li>
+                <li><span>SeQura</span></li>
+                <li><span>Caixa Bank</span></li>
+                <li><span>Monedero GAME</span></li>
+                <li><span>Puntos socio</span></li>
+                <li><span>Tarjeta Regalo</span></li>
+            </ul>
+        </div>
+        <div>
+            <h2>Legal</h2>
+            <ul>
+                <li><span>Condiciones de venta</span></li>
+                <li><span>Información legal</span></li>
+                <li><span>Política de privacidad</span></li>
+                <li><span>Política de cookies</span></li>
+                <li><span>Contratos</span></li>
+            </ul>
+        </div>
+        <div class="footpie">
+            <p>© 2024 tiendaonline.com. Todos los derechos reservados.</p>
+            <p>Contacto: contacto@peorquetemu.com</p>
+        </div>
+    </footer>
+
+    <script src="../script/main.js"></script>
+</body>
+
+</html>
